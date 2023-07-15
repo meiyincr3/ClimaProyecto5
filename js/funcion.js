@@ -22,14 +22,14 @@ let plot = (data) => {
 };
 
 let plot2 = (data) => {
-    const ctx = document.getElementById("myChart2");
+    const ctx = document.getElementById("myBarChart");
   
     const dataset = {
-      labels: data.daily.time /* ETIQUETA DE DATOS */,
+      labels: data.hourly.time /* ETIQUETA DE DATOS */,
       datasets: [
         {
           label: "Temperatura semanal" /* ETIQUETA DEL GRÁFICO */,
-          data: data.daily.uv_index_max /* ARREGLO DE DATOS */,
+          data: data.hourly.temperature_2m /* ARREGLO DE DATOS */,
           fill: false,
           borderColor: "rgb(75, 192, 192)",
           tension: 0.1,
